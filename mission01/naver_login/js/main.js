@@ -29,7 +29,8 @@ function pwReg(text) {
 }
 
 function onChangeIdAndPwdInputHandler(e, node) {
-  emailReg(e.target.value) || pwReg(e.target.value)
+  const inputVal = e.target.value;
+  emailReg(inputVal) || pwReg(inputVal)
     ? node.classList.remove("is--invalid")
     : node.classList.add("is--invalid");
 }
